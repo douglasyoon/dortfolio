@@ -1,0 +1,23 @@
+.homeContents {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 76px - 52px - 24px - 24px);
+  & .box {
+    & .mainText {
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 1280px) {
+    height: calc(100vh - 52px - 52px - 24px - 24px);
+  }
+  @media (max-width: 750px) {
+    & .box {
+      & .mainText {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

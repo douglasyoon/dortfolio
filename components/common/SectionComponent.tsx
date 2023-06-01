@@ -1,16 +1,4 @@
-import { styled } from '@/stitches.config';
-
-const SectionStyle = styled('section', {
-  width: '100%',
-  padding: '24px 20px',
-  '& h2': {
-    fontSize: '2rem',
-  },
-  '& .subTitle': {
-    display: 'block',
-    marginTop: '8px',
-  },
-});
+import style from './Section.module.scss';
 
 export default function SectionComponent({
   children,
@@ -26,10 +14,10 @@ export default function SectionComponent({
   isHiddenLine?: boolean;
 }) {
   return (
-    <SectionStyle>
+    <section className={style.section}>
       {isHiddenTitle ? <h2 className='hidden'>{title}</h2> : <h2>{title}</h2>}
-      {subTitle && <span className='subTitle'>{subTitle}</span>}
+      {subTitle && <span className={style.subTitle}>{subTitle}</span>}
       {children}
-    </SectionStyle>
+    </section>
   );
 }

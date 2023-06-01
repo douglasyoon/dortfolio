@@ -1,6 +1,5 @@
-import { styled } from '@/stitches.config';
+import style from './ProjectItem.module.scss';
 import Link from 'next/link';
-import React from 'react';
 import GithubIcon from '../common/icons/GithubIcon';
 import NotionIcon from '../common/icons/NotionIcon';
 import WebsiteIcon from '../common/icons/WebsiteIcon';
@@ -17,80 +16,21 @@ export interface IProjectItem {
   techStack: Array<string>;
 }
 
-const ProjectItemStyle = styled('li', {
-  position: 'relative',
-  width: '100%',
-  '& .image-frame': {
-    position: 'relative',
-    width: '100%',
-    height: 0,
-    paddingBottom: '56%',
-    borderRadius: '16px',
-    boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
-    overflow: 'hidden',
-    '& img': {
-      position: 'absolute',
-      left: 0,
-      top: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-    },
-  },
-  '& .project-info': {
-    padding: '12px 0 20px 0',
-    '& .project-title': {
-      fontWeight: 500,
-    },
-    '& .project-desc-list': {
-      marginTop: '12px',
-      '& .project-url-list': {
-        display: 'flex',
-        alignItems: 'center',
-        gap: '12px',
-        '& li': {
-          width: '40px',
-          height: '40px',
-          borderRadius: '12px',
-          background: '$solidwhite',
-          boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
-          '& a': {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%',
-            height: '100%',
-          },
-        },
-      },
-      '& > li': {
-        marginBottom: '12px',
-        '& span': {
-          fontSize: '0.9rem',
-        },
-        '&:last-child': {
-          marginBottom: 0,
-        },
-      },
-    },
-  },
-});
-
 export default function ProjectItem({
   projectInfo,
 }: {
   projectInfo: IProjectItem;
 }) {
   return (
-    <ProjectItemStyle>
-      <div className='image-frame'>
+    <li className={style.projectItem}>
+      <div className={style.imageFrame}>
         <img src={projectInfo.coverImg} alt={projectInfo.title} />
       </div>
-      <div className='project-info'>
-        <p className='project-title'>{projectInfo.title}</p>
-        <ul className='project-desc-list'>
+      <div className={style.projectInfo}>
+        <p className={style.projectTitle}>{projectInfo.title}</p>
+        <ul className={style.projectDescList}>
           <li>
-            <ul className='project-url-list'>
+            <ul className={style.projectUrlList}>
               {projectInfo.websiteUrl && (
                 <li>
                   <Link href={projectInfo.websiteUrl} target='_blank'>
@@ -122,6 +62,6 @@ export default function ProjectItem({
           </li>
         </ul>
       </div>
-    </ProjectItemStyle>
+    </li>
   );
 }

@@ -1,0 +1,30 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.projectListBox {
+  padding: 40px 0;
+  border-bottom: 1px solid $gray3;
+  &:last-child {
+    border-bottom: 0;
+  }
+  & h3 {
+    font-size: 1.5rem;
+  }
+  & .projectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 24px;
+    width: 100%;
+    margin-top: 16px;
+  }
+  @include xl {
+    & .projectList {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @include md {
+    & .projectList {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.section {
+  width: 100%;
+  padding: 24px 20px;
+  & h2 {
+    font-size: 2rem;
+  }
+  & .subTitle {
+    display: block;
+    margin-top: 8px;
+  }
+}
