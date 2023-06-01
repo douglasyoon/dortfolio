@@ -1,5 +1,10 @@
 import style from './Home.module.scss';
 import SectionComponent from '@/components/common/SectionComponent';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dortfolio - 프론트엔드 개발자 윤동규',
+};
 
 export default function HomePage() {
   return (
