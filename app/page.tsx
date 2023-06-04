@@ -4,6 +4,15 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dortfolio - 프론트엔드 개발자 윤동규',
+  description: 'Front-End 개발자 윤동규의 포트폴리오입니다.',
+  keywords: ['Front-End', 'Portfolio'],
+  authors: [{ url: 'https://github.com/douglasyoon/', name: '윤동규' }],
+  openGraph: {
+    title: 'Dortfolio - 프론트엔드 개발자 윤동규',
+    description: 'Front-End 개발자 윤동규의 포트폴리오입니다.',
+    emails: 'douglasyoon9@gmail.com',
+    url: 'https://dortfolio.vercel.app/',
+  },
 };
 
 export default function HomePage() {

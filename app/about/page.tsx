@@ -16,6 +16,25 @@ interface ISkillList {
   list: Array<ISkill>;
 }
 
+interface IContact {
+  id: string;
+  kind: string;
+  info: string;
+}
+
+export const metadata: Metadata = {
+  title: 'About - 프론트엔드 개발자 윤동규',
+  description: 'Front-End 개발자 윤동규를 소개합니다.',
+  keywords: ['Front-End', 'Portfolio'],
+  authors: [{ url: 'https://github.com/douglasyoon/', name: '윤동규' }],
+  openGraph: {
+    title: 'About - 프론트엔드 개발자 윤동규',
+    description: 'Front-End 개발자 윤동규를 소개합니다.',
+    emails: 'douglasyoon9@gmail.com',
+    url: 'https://dortfolio.vercel.app/about',
+  },
+};
+
 const skillList: Array<ISkillList> = [
   {
     id: 'skilllist01',
@@ -76,12 +95,6 @@ const skillList: Array<ISkillList> = [
   },
 ];
 
-interface IContact {
-  id: string;
-  kind: string;
-  info: string;
-}
-
 const contactList: Array<IContact> = [
   {
     id: 'contact01',
@@ -89,10 +102,6 @@ const contactList: Array<IContact> = [
     info: 'douglasyoon9@gmail.com',
   },
 ];
-
-export const metadata: Metadata = {
-  title: 'About - 프론트엔드 개발자 윤동규',
-};
 
 export default function AboutPage() {
   return (
