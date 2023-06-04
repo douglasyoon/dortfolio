@@ -16,7 +16,7 @@
       padding: 16px 20px;
       background: #{$solidwhite};
       border-radius: 20px;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      box-shadow: #{$boxShadow};
       &:not(:last-child) {
         margin-bottom: 16px;
       }
@@ -32,6 +32,12 @@
           & img {
             width: 52px;
             height: 52px;
+            transition: transform 0.3s ease-in-out;
+            @media (hover: hover) {
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
           }
         }
       }

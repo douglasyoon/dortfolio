@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <SectionComponent title='Home' isHiddenTitle={true}>
+    <SectionComponent title='Home'>
       <div className={style.homeContents}>
         <div className={style.box}>
           <p className={style.mainText}>

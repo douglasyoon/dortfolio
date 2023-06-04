@@ -1,5 +1,4 @@
 import style from './ProjectItem.module.scss';
-import Link from 'next/link';
 import GithubIcon from '../common/icons/GithubIcon';
 import NotionIcon from '../common/icons/NotionIcon';
 import WebsiteIcon from '../common/icons/WebsiteIcon';
@@ -42,7 +41,7 @@ export default function ProjectItem({
               )}
               <li>
                 <IconLink
-                  href={`/projects/${projectInfo.notionUrl}`}
+                  href={`${projectInfo.notionUrl}`}
                   icon={<NotionIcon />}
                 />
               </li>

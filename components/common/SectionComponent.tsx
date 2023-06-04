@@ -5,13 +5,11 @@ export default function SectionComponent({
   title,
   isHiddenTitle = false,
   subTitle,
-  isHiddenLine = true,
 }: {
   children: React.ReactNode;
   title: string;
   isHiddenTitle?: boolean;
   subTitle?: string;
-  isHiddenLine?: boolean;
 }) {
   return (
     <section className={style.section}>
