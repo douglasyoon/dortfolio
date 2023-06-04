@@ -12,7 +12,6 @@ export interface INav {
 }
 
 const navList: Array<INav> = [
-  { id: 'menu1', name: 'Home', path: '/' },
   { id: 'menu2', name: 'About', path: '/about' },
   { id: 'menu3', name: 'Projects', path: '/projects' },
 ];
@@ -43,7 +42,7 @@ export default function Header() {
         <ul className={style.subNav}>
           <li>
             <Link href='https://github.com/douglasyoon' target='_blank'>
-              <GithubIcon />
+              <GithubIcon size={32} />
             </Link>
           </li>
         </ul>

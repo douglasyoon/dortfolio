@@ -3,7 +3,7 @@ interface IYoutubeIconProps extends IIconProps {
 }
 
 export default function YoutubeIcon({
-  size = 32,
+  size = 40,
   color = 'black',
   playColor = 'white',
 }: IYoutubeIconProps) {

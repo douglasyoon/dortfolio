@@ -4,6 +4,7 @@ import GithubIcon from '../common/icons/GithubIcon';
 import NotionIcon from '../common/icons/NotionIcon';
 import WebsiteIcon from '../common/icons/WebsiteIcon';
 import YoutubeIcon from '../common/icons/YoutubeIcon';
+import IconLink from '../common/IconLink';
 
 export interface IProjectItem {
   id: string;
@@ -33,32 +34,36 @@ export default function ProjectItem({
             <ul className={style.projectUrlList}>
               {projectInfo.websiteUrl && (
                 <li>
-                  <Link href={projectInfo.websiteUrl} target='_blank'>
-                    <WebsiteIcon color='#027DC4' />
-                  </Link>
+                  <IconLink
+                    href={projectInfo.websiteUrl}
+                    icon={<WebsiteIcon color='#027DC4' />}
+                  />
                 </li>
               )}
               <li>
-                <Link href={`/projects/${projectInfo.notionUrl}`}>
-                  <NotionIcon />
-                </Link>
+                <IconLink
+                  href={`/projects/${projectInfo.notionUrl}`}
+                  icon={<NotionIcon />}
+                />
               </li>
               <li>
-                <Link href={projectInfo.gitHubUrl} target='_blank'>
-                  <GithubIcon color='#171515' />
-                </Link>
+                <IconLink
+                  href={projectInfo.gitHubUrl}
+                  icon={<GithubIcon color='#171515' />}
+                />
               </li>
               {projectInfo.youtubeUrl && (
                 <li>
-                  <Link href={projectInfo.youtubeUrl} target='_blank'>
-                    <YoutubeIcon color='#FF0000' />
-                  </Link>
+                  <IconLink
+                    href={projectInfo.youtubeUrl}
+                    icon={<YoutubeIcon color='#FF0000' />}
+                  />
                 </li>
               )}
             </ul>
           </li>
           <li>
-            <span>Tech : {projectInfo.techStack.join(', ')}</span>
+            <span>기술 스택 : {projectInfo.techStack.join(', ')}</span>
           </li>
         </ul>
       </div>

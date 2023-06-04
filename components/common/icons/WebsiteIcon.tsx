@@ -1,5 +1,5 @@
 export default function WebsiteIcon({
-  size = 32,
+  size = 40,
   color = 'black',
 }: IIconProps) {
   return (

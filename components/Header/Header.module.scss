@@ -21,7 +21,7 @@
     margin: 12px auto;
     padding: 0 20px;
     border-radius: 16px;
-    background: rgba(253, 254, 255, 1);
+    background: rgba(253, 254, 255, 0.8);
     backdrop-filter: blur(12px);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     & nav {
@@ -43,47 +43,16 @@
     }
   }
   @include xl {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
     height: 52px;
-    background: rgba(253, 254, 255, 1);
+    background: rgba(253, 254, 255, 0.8);
     backdrop-filter: blur(12px);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    z-index: 1000;
     & .inner {
-      & h1 {
-        font-size: 1rem;
-      }
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1240px;
       height: 100%;
       margin: 0 auto;
-      padding: 0 20px;
       background: transparent;
       backdrop-filter: none;
       box-shadow: none;
-      & nav {
-        & ul {
-          display: flex;
-          gap: 52px;
-        }
-      }
-      & .subNav {
-        display: flex;
-        gap: 52px;
-        & li {
-          & a {
-            display: block;
-            width: 32px;
-            height: 32px;
-          }
-        }
-      }
     }
   }
 }

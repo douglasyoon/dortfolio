@@ -1,4 +1,4 @@
-export default function GithubIcon({ size = 32, color = 'black' }: IIconProps) {
+export default function GithubIcon({ size = 40, color = 'black' }: IIconProps) {
   return (
     <svg
       width={`${size}px`}

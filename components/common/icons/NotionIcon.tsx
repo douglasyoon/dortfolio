@@ -1,4 +1,4 @@
-export default function NotionIcon({ size = 32, color = 'black' }: IIconProps) {
+export default function NotionIcon({ size = 40, color = 'black' }: IIconProps) {
   return (
     <svg
       width={`${size}px`}
