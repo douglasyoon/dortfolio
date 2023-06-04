@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import GithubIcon from '../common/icons/GithubIcon';
 import style from './Header.module.scss';
 
@@ -17,6 +18,7 @@ const navList: Array<INav> = [
 ];
 
 export default function Header() {
+  const [isMobileMenuOn, setIsMobileMenuOn] = useState<boolean>(false);
   const pathname = usePathname().split('/')[1];
   return (
     <header className={style.header}>
@@ -24,12 +26,12 @@ export default function Header() {
         <h1>
           <Link href='/'>Dortfolio</Link>
         </h1>
-        <nav>
+        <nav className={style.mainNav}>
           <ul>
             {navList.map((navItem) => (
               <li key={navItem.id}>
                 {navItem.path === `/${pathname}` ? (
-                  <Link href={navItem.path} className='active'>
+                  <Link href={navItem.path} className={style.active}>
                     {navItem.name}
                   </Link>
                 ) : (
@@ -46,6 +48,46 @@ export default function Header() {
             </Link>
           </li>
         </ul>
+        <button
+          className={
+            isMobileMenuOn
+              ? `${style.mobileNavButton} ${style.active}`
+              : `${style.mobileNavButton}`
+          }
+          onClick={() => setIsMobileMenuOn(!isMobileMenuOn)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav
+          className={
+            isMobileMenuOn
+              ? `${style.mobileNav} ${style.active}`
+              : `${style.mobileNav}`
+          }
+        >
+          <ul className={style.mobileMainNav}>
+            {navList.map((navItem) => (
+              <li key={navItem.id}>
+                {navItem.path === `/${pathname}` ? (
+                  <Link href={navItem.path} className={style.active}>
+                    {navItem.name}
+                  </Link>
+                ) : (
+                  <Link href={navItem.path}>{navItem.name}</Link>
+                )}
+              </li>
+            ))}
+          </ul>
+          <ul className={style.mobileSubNav}>
+            <li>
+              <Link href='https://github.com/douglasyoon' target='_blank'>
+                <GithubIcon size={32} />
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

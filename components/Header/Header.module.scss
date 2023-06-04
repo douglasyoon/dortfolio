@@ -24,10 +24,17 @@
     background: rgba(253, 254, 255, 0.8);
     backdrop-filter: blur(12px);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    & nav {
+    & .mainNav {
       & ul {
         display: flex;
         gap: 52px;
+        & li {
+          & a {
+            &.active {
+              text-decoration: underline;
+            }
+          }
+        }
       }
     }
     & .subNav {
@@ -38,6 +45,83 @@
           display: block;
           width: 32px;
           height: 32px;
+        }
+      }
+    }
+    & .mobileNavButton {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      background: transparent;
+      & span {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background: #{$gray9};
+        transition: all 0.3s ease-in-out;
+      }
+      &.active {
+        & span:nth-child(1) {
+          transform: translateY(8px) rotate(-45deg);
+        }
+        & span:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        & span:nth-child(3) {
+          opacity: 0;
+        }
+      }
+    }
+    & .mobileNav {
+      display: none;
+      position: fixed;
+      right: -112px;
+      top: 64px;
+      transition: right 0.3s ease-in-out;
+      & .mobileMainNav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 12px;
+        & li {
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 92px;
+            height: 32px;
+            background: #{$solidwhite};
+            border-radius: 16px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            text-align: center;
+            &.active {
+              background: #{$gray9};
+              color: #{$solidwhite};
+            }
+          }
+        }
+      }
+      & .mobileSubNav {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 12px;
+        & li {
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: #{$solidwhite};
+            border-radius: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          }
         }
       }
     }
@@ -53,6 +137,25 @@
       background: transparent;
       backdrop-filter: none;
       box-shadow: none;
+    }
+  }
+  @include sm {
+    .inner {
+      & .mainNav {
+        display: none;
+      }
+      & .subNav {
+        display: none;
+      }
+      & .mobileNavButton {
+        display: flex;
+      }
+      & .mobileNav {
+        display: block;
+        &.active {
+          right: 20px;
+        }
+      }
     }
   }
 }

@@ -79,9 +79,6 @@ body {
 a {
   text-decoration: none;
   text-underline-offset: 2px;
-  &.active {
-    text-decoration: underline;
-  }
 }
 
 @media (hover: hover) {
