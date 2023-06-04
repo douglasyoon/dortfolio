@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description: 'Front-End 개발자 윤동규의 포트폴리오입니다.',
   keywords: ['Front-End', 'Portfolio'],
   authors: [{ url: 'https://github.com/douglasyoon/', name: '윤동규' }],
+  verification: {
+    google: '',
+  },
   openGraph: {
     title: 'Dortfolio - 프론트엔드 개발자 윤동규',
     description: 'Front-End 개발자 윤동규의 포트폴리오입니다.',
@@ -17,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <SectionComponent title='Home'>
+    <SectionComponent title='Home' isHiddenTitle={true}>
       <div className={style.homeContents}>
         <div className={style.box}>
           <p className={style.mainText}>
