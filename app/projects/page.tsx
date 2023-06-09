@@ -109,14 +109,7 @@ const projectListResponse: Array<IProjectList> = [
         notionUrl:
           'https://star-mat-4a8.notion.site/Dortfolio-f214d5ba1885459690cbfb699bba008f?pvs=4',
         gitHubUrl: 'https://github.com/douglasyoon/dortfolio',
-        techStack: [
-          'Next.js',
-          'JavaScript',
-          'TypeScript',
-          'Jotai',
-          'SCSS',
-          'React-Notion-X',
-        ],
+        techStack: ['Next.js', 'JavaScript', 'TypeScript', 'SCSS'],
       },
     ],
   },
