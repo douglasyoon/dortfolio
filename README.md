@@ -6,4 +6,4 @@
 
 ## 기술 스택
 
-[![My Skills](https://skillicons.dev/icons?i=nextjs,js,ts,scss)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=nextjs,js,ts,scss,mongo)](https://skillicons.dev)
