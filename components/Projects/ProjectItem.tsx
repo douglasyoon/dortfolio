@@ -14,6 +14,8 @@ export interface IProjectItem {
   gitHubUrl: string;
   youtubeUrl?: string;
   techStack: Array<string>;
+  started_date: string;
+  done_date?: string;
 }
 
 export default function ProjectItem({
