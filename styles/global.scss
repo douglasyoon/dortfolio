@@ -127,6 +127,40 @@ main {
   background: #{$gray9};
 }
 
+// Skeleton UI
+@-webkit-keyframes skeleton-animation {
+  0% {
+    background: rgba(66, 66, 66, 0.1);
+  }
+
+  50% {
+    background: rgba(117, 117, 117, 0.3);
+  }
+
+  100% {
+    background: rgba(66, 66, 66, 0.1);
+  }
+}
+
+@keyframes skeleton-animation {
+  0% {
+    background: rgba(66, 66, 66, 0.1);
+  }
+
+  50% {
+    background: rgba(117, 117, 117, 0.3);
+  }
+
+  100% {
+    background: rgba(66, 66, 66, 0.1);
+  }
+}
+
+.skeleton-list-item {
+  -webkit-animation: skeleton-animation 0.85s infinite ease-in-out;
+  animation: skeleton-animation 0.85s infinite ease-in-out;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   background: transparent;
