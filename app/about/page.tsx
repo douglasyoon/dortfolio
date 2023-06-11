@@ -27,9 +27,6 @@ export const metadata: Metadata = {
   description: 'Front-End 개발자 윤동규를 소개합니다.',
   keywords: ['Front-End', 'Portfolio'],
   authors: [{ url: 'https://github.com/douglasyoon/', name: '윤동규' }],
-  verification: {
-    google: process.env.NEXT_APP_GOOGLE_SITE_VERIFICATION,
-  },
   openGraph: {
     title: 'About - 프론트엔드 개발자 윤동규',
     description: 'Front-End 개발자 윤동규를 소개합니다.',

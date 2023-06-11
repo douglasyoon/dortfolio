@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: ['Front-End', 'Portfolio'],
   authors: [{ url: 'https://github.com/douglasyoon/', name: '윤동규' }],
   verification: {
-    google: '',
+    google: process.env.NEXT_APP_GOOGLE_SITE_VERIFICATION,
   },
   openGraph: {
     title: 'Dortfolio - 프론트엔드 개발자 윤동규',
