@@ -1,5 +1,5 @@
 import style from './ProjectList.module.scss';
-import ProjectItem, { IProjectItem } from './ProjectItem';
+import ProjectItem, { IProject } from './ProjectItem';
 
 export default function ProjectList({
   title,
@@ -8,7 +8,7 @@ export default function ProjectList({
 }: {
   title: string;
   isHiddenTitle?: boolean;
-  projectList: Array<IProjectItem>;
+  projectList: Array<IProject>;
 }) {
   return (
     <article className={style.projectListBox}>
