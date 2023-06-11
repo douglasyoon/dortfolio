@@ -4,6 +4,8 @@ import ProjectList from '@/components/Projects/ProjectList';
 import { API_URL } from '@/lib/constant';
 import { Metadata } from 'next';
 
+export const revalidate = 3600 * 12;
+
 export const metadata: Metadata = {
   title: 'Projects - 프론트엔드 개발자 윤동규',
   description: 'Front-End 개발자 윤동규가 진행해온 프로젝트입니다.',

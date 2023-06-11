@@ -6,6 +6,8 @@ import { API_URL } from '@/lib/constant';
 import SkillsList, { ISkill } from '@/components/About/SkillsList';
 import AboutArticle from '@/components/About/AboutArticle';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'About - 프론트엔드 개발자 윤동규',
   description: 'Front-End 개발자 윤동규를 소개합니다.',
@@ -88,5 +90,3 @@ export default async function AboutPage() {
     </SectionComponent>
   );
 }
-
-export const dynamic = 'force-dynamic';
