@@ -6,7 +6,7 @@ import YoutubeIcon from '../common/icons/YoutubeIcon';
 import IconLink from '../common/IconLink';
 
 export interface IProjectItem {
-  id: string;
+  _id: string;
   title: string;
   coverImg: string;
   websiteUrl?: string;

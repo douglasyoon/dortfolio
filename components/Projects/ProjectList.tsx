@@ -15,7 +15,7 @@ export default function ProjectList({
       {isHiddenTitle ? <h3 className='hidden'>{title}</h3> : <h3>{title}</h3>}
       <ul className={style.projectList}>
         {projectList.map((projectItem) => (
-          <ProjectItem key={projectItem.id} projectInfo={projectItem} />
+          <ProjectItem key={projectItem._id} projectInfo={projectItem} />
         ))}
       </ul>
     </article>

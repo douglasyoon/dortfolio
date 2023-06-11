@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import mongoDB from '@/lib/mongoDB';
 
 export async function GET() {
-  const result = await (await mongoDB(TEAM_PROJECTS)).find().toArray();
+  const res = await (await mongoDB(TEAM_PROJECTS)).find().toArray();
 
-  return NextResponse.json({ status: 200, list: result });
+  return NextResponse.json({ status: 200, list: res });
 }
