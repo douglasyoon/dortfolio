@@ -1,7 +1,7 @@
-export const notionRootPageId = process.env.NEXT_APP_NOTION_ROOT_ID ?? '';
-export const notionResumePageId = process.env.NEXT_APP_NOTION_RESUME_ID ?? '';
-export const notionPortfolioPageId =
-  process.env.NEXT_APP_NOTION_PORTFOLIO_ID ?? '';
-export const gitHubLink = process.env.NEXT_APP_GITHUB_LINK ?? '';
-export const PERSONAL_PROJECTS = 'personal_projects';
-export const TEAM_PROJECTS = 'team_projects';
+export const gitHubLink = process.env.NEXT_PUBLIC_GITHUB_LINK ?? '';
+export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? '';
+export const MONGODB_URL = process.env.NEXT_PUBLIC_MONGODB_URL ?? '';
+export const DB_NAME = process.env.NEXT_PUBLIC_DB_NAME ?? '';
+export const COLLECTION_PROJECTS = 'projects';
+export const COLLECTION_SKILLS = 'skills';
+export const COLLECTION_CONTACT = 'contact';

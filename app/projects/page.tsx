@@ -1,9 +1,8 @@
 import SectionComponent from '@/components/common/SectionComponent';
-import { IProjectItem } from '@/components/Projects/ProjectItem';
+import { IProject } from '@/components/Projects/ProjectItem';
 import ProjectList from '@/components/Projects/ProjectList';
+import { API_URL } from '@/lib/constant';
 import { Metadata } from 'next';
-import * as TeamProject from '../api/projects/team/route';
-import * as PersonalProject from '../api/projects/personal/route';
 
 export const metadata: Metadata = {
   title: 'Projects - 프론트엔드 개발자 윤동규',
@@ -18,21 +17,16 @@ export const metadata: Metadata = {
   },
 };
 
-interface ProjectResponse {
-  status: string;
-  list: Array<IProjectItem>;
-}
-
 const getTeamProjects = async () => {
-  const res = await TeamProject.GET();
-  const { list }: ProjectResponse = await res.json();
+  const res = await fetch(`${API_URL}/api/projects/team`);
+  const { list }: Response<IProject> = await res.json();
 
   return list;
 };
 
 const getPersonalProjects = async () => {
-  const res = await PersonalProject.GET();
-  const { list }: ProjectResponse = await res.json();
+  const res = await fetch(`${API_URL}/api/projects/personal`);
+  const { list }: Response<IProject> = await res.json();
 
   return list;
 };

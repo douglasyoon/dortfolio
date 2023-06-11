@@ -1,10 +1,9 @@
 import { MongoClient } from 'mongodb';
+import { MONGODB_URL, DB_NAME } from './constant';
 
 const mongoDB = async (collectionName: string) => {
-  const client = await MongoClient.connect(
-    process.env.NEXT_APP_MONGODB_URL ?? ''
-  );
-  const db = client.db(process.env.NEXT_APP_DB_NAME);
+  const client = await MongoClient.connect(MONGODB_URL);
+  const db = client.db(DB_NAME);
 
   return db.collection(collectionName);
 };

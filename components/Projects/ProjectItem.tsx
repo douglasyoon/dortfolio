@@ -5,7 +5,7 @@ import WebsiteIcon from '../common/icons/WebsiteIcon';
 import YoutubeIcon from '../common/icons/YoutubeIcon';
 import IconLink from '../common/IconLink';
 
-export interface IProjectItem {
+export interface IProject {
   _id: string;
   title: string;
   coverImg: string;
@@ -21,7 +21,7 @@ export interface IProjectItem {
 export default function ProjectItem({
   projectInfo,
 }: {
-  projectInfo: IProjectItem;
+  projectInfo: IProject;
 }) {
   return (
     <li className={style.projectItem}>

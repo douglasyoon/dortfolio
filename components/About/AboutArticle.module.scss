@@ -1,0 +1,10 @@
+.aboutArticle {
+  margin-top: 40px;
+  & h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  &:last-child {
+    margin-bottom: 40px;
+  }
+}
