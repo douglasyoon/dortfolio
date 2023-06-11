@@ -1,4 +1,5 @@
 @import '@/styles/variables';
+@import '@/styles/mixins';
 
 .aboutSkillList {
   padding: 16px 20px;
@@ -27,6 +28,12 @@
           }
         }
       }
+    }
+  }
+  @include xs {
+    & .aboutSkills {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
 }
