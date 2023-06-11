@@ -17,15 +17,8 @@ export const metadata: Metadata = {
   },
 };
 
-const getTeamProjects = async () => {
-  const res = await fetch(`${API_URL}/api/projects/team`);
-  const { list }: Response<IProject> = await res.json();
-
-  return list;
-};
-
-const getPersonalProjects = async () => {
-  const res = await fetch(`${API_URL}/api/projects/personal`);
+const getProjects = async (type: 'team' | 'personal') => {
+  const res = await fetch(`${API_URL}/api/projects/${type}`);
   const { list }: Response<IProject> = await res.json();
 
   return list;
@@ -33,8 +26,8 @@ const getPersonalProjects = async () => {
 
 export default async function ProjectsPage() {
   const [teamProjects, personalProjects] = await Promise.all([
-    getTeamProjects(),
-    getPersonalProjects(),
+    getProjects('team'),
+    getProjects('personal'),
   ]);
   return (
     <SectionComponent title='Projects'>

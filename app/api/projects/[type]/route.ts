@@ -2,9 +2,16 @@ import mongoDB from '@/lib/mongoDB';
 import { NextResponse } from 'next/server';
 import { COLLECTION_PROJECTS } from '@/lib/constant';
 
-export async function GET() {
+export async function GET(
+  request: Request,
+  {
+    params,
+  }: {
+    params: { type: 'team' | 'personal' };
+  }
+) {
   const res = await (await mongoDB(COLLECTION_PROJECTS))
-    .find({ type: 'personal' })
+    .find({ type: params.type })
     .sort({ started_date: -1 })
     .toArray();
 
