@@ -88,3 +88,5 @@ export default async function AboutPage() {
     </SectionComponent>
   );
 }
+
+export const dynamic = 'force-dynamic';
