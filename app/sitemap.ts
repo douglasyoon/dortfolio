@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://dortfolio.vercel.app/';
+  const baseUrl = 'https://dortfolio.vercel.app';
   return [
     { url: baseUrl, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
