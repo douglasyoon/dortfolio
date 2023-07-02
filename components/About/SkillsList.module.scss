@@ -11,7 +11,7 @@
   }
   & h4 {
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   & .aboutSkills {
     display: flex;
@@ -30,10 +30,15 @@
       }
     }
   }
-  @include xs {
+  @include md {
     & .aboutSkills {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      & li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
     }
   }
 }
